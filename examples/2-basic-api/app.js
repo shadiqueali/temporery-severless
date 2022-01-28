@@ -3,7 +3,7 @@ const result= document.querySelector('.result')
 
 const fetchData = async () => {
     try {
-        const {data} = await axios.get('https://temp-serverless.netlify.app/api/2-basic-api')
+        const {data} = await axios.get('/api/2-basic-api')
         const produtcts = data.map((product)=>{
             const {image:{url},name,price} = product
             return ` <article class="product">
